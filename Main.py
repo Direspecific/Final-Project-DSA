@@ -478,16 +478,33 @@ search_search_button.place(x = 420, y = 450)
 label_title_library = customtkinter.CTkLabel(library_frame, text="Library",width=library_frame.winfo_width(),height=50,font=("Quando",50),fg_color="transparent",text_color="black")
 label_title_library.place(x=(window_width/2)-125,y=0)
 
-library_library_frame = customtkinter.CTkFrame(library_frame,width=1500,height=765,fg_color="#B88B68",corner_radius=0)
+library_library_frame = customtkinter.CTkFrame(library_frame,width=1500,height=765,fg_color="#614D40",corner_radius=0)
 library_library_frame.place(x = 0, y = 0)
 
-library_search_entry = customtkinter.CTkEntry(library_library_frame,width=550,height=50,fg_color="white",corner_radius=45,placeholder_text="Search Titles...",font=("Quando",20))
-library_search_entry.place(x = 320,y=50)
+library_library_inner_frame = customtkinter.CTkFrame(library_library_frame,width=487,height=50,fg_color="#433F3D",corner_radius=0)
+library_library_inner_frame.place(x = 50, y = 100)
 
-library_search_entry_button_img = customtkinter.CTkImage((Image.open("icons\searchicon.png")),size=(25,25))
-library_search_entry_button = customtkinter.CTkButton(library_library_frame,text="",image=home_search_entry_button_img,width=46,height=46,fg_color="transparent",corner_radius=45,border_color="white",hover_color="#CCD5AE")
-library_search_entry_button.place(x=870,y=50)
+library_bookshelf_frame = customtkinter.CTkFrame(library_library_frame,width=1235,height=1000,fg_color="#433F3D",corner_radius=0)
+library_bookshelf_frame.place(x = 50, y = 200)
 
+library_search_entry = customtkinter.CTkEntry(library_library_frame,width=300,height=35,fg_color="white",corner_radius=45,placeholder_text="Search Titles...",font=("Quando",20))
+library_search_entry.place(x = 900,y=20)
+
+library_search_entry_button_img = customtkinter.CTkImage((Image.open("icons\searchicon.png")),size=(20,20))
+library_search_entry_button = customtkinter.CTkButton(library_library_frame,text="",image=home_search_entry_button_img,width=30,height=35,fg_color="transparent",corner_radius=45,border_color="white",hover_color="#CCD5AE")
+library_search_entry_button.place(x=1200,y=20)
+
+library_reading_button = customtkinter.CTkButton(library_library_inner_frame,width=100,height=40,font=("Quando",20),fg_color="#433F3D", hover_color="#B88B68",corner_radius=0,text="Reading")
+library_reading_button.place(x = 5, y = 5)
+
+library_plan2read_button = customtkinter.CTkButton(library_library_inner_frame,width=140,height=40,font=("Quando",20),fg_color="#433F3D", hover_color="#B88B68",corner_radius=0,text="Plan to read")
+library_plan2read_button.place(x = 100, y = 5)
+
+library_completed_button = customtkinter.CTkButton(library_library_inner_frame,width=120,height=40,font=("Quando",20),fg_color="#433F3D", hover_color="#B88B68",corner_radius=0,text="Completed")
+library_completed_button.place(x = 240, y = 5)
+
+library_dropped_button = customtkinter.CTkButton(library_library_inner_frame,width=120,height=40,font=("Quando",20),fg_color="#433F3D", hover_color="#B88B68",corner_radius=0,text="Dropped")
+library_dropped_button.place(x = 360, y = 5)   
 
 # Addbooks Content
 addbooks_upload_cover_frame = customtkinter.CTkFrame(add_books_frame,width=250,height=360,fg_color="#414240",corner_radius=0)
